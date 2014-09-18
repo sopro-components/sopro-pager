@@ -10,7 +10,7 @@ Usage
     $ cd sopro-pager/src
     $ npm install
     $ grunt
-    $ firefox ../test.html
+    $ firefox ../component/test.html
 
 Modes of display:
   Linear
