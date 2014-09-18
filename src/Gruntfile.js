@@ -18,10 +18,18 @@ module.exports = function(grunt) {
     */
     jade: {
       compile: {
-        src: ['*.jade'],
-        dest: ['*.html']
-      }
-    }
+        options: {client: false, pretty: true},
+        files: [
+          {
+            cwd: 'jade',
+            src: '*.jade',
+            dest: '.',
+            expand: true,
+            ext: '.html'
+          },
+        ],
+      },
+    },
   });
 
   // These plugins provide necessary tasks.
