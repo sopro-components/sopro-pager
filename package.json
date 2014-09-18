@@ -1,0 +1,34 @@
+{
+  "name": "sopro-pager",
+  "version": "0.1.0",
+  "description": "A container to display more than one page of content",
+  "main": "sopro-content.html",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sopro-components/sopro-content.git"
+  },
+  "keywords": [
+    "societypro",
+    "cambrian",
+    "materialdesign"
+  ],
+  "author": "plato-cambrian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sopro-components/sopro-content/issues"
+  },
+  "homepage": "https://github.com/sopro-components/sopro-content",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jade": "^0.12.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
