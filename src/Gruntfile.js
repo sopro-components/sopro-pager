@@ -4,17 +4,13 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     // Task configuration.
-    /*
     watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
-      },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
+      jade: {
+        files: ['jade/*'],
+        tasks: ['jade:compile']
       }
     },
+    /*
     */
     bower: {
       install: {
@@ -44,14 +40,15 @@ module.exports = function(grunt) {
   });
 
   // These plugins provide necessary tasks.
-  // grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-jade');
 
   // Default task.
   grunt.registerTask('default', [
     'bower:install',
-    'jade:compile'
+    'jade:compile',
+    'watch:jade'
   ]);
 
 };
