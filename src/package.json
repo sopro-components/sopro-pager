@@ -26,6 +26,7 @@
   "homepage": "https://github.com/sopro-components/sopro-content",
   "devDependencies": {
     "grunt": "~0.4.5",
+    "grunt-bower-task": "^0.4.0",
     "grunt-contrib-jade": "^0.12.0",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-qunit": "~0.5.2",

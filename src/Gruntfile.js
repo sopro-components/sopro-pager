@@ -16,6 +16,17 @@ module.exports = function(grunt) {
       }
     },
     */
+    bower: {
+      install: {
+        options:{
+          targetDir: '../component/bower_components',
+          layout: 'byComponent',
+          copy: false,
+          cleanTargetDir: true,
+          verbose: true,
+        }
+      },
+    },
     jade: {
       compile: {
         options: {client: false, pretty: true},
@@ -23,7 +34,7 @@ module.exports = function(grunt) {
           {
             cwd: 'jade',
             src: '*.jade',
-            dest: '.',
+            dest: '../component',
             expand: true,
             ext: '.html'
           },
@@ -34,9 +45,13 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   // grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-jade');
 
   // Default task.
-  grunt.registerTask('default', ['jade:compile']);
+  grunt.registerTask('default', [
+    'bower:install',
+    'jade:compile'
+  ]);
 
 };

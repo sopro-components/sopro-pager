@@ -1,4 +1,16 @@
-This app is a content area for multiple views or pages of content.
+sopro-pager
+===========
+
+This component is a content area for multiple views or pages of content.
+
+Usage
+-----
+
+    $ git clone https://github.com/sopro-dist/sopro-pager.git
+    $ cd sopro-pager/src
+    $ npm install
+    $ grunt
+    $ firefox ../test.html
 
 Modes of display:
   Linear
